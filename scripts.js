@@ -1,17 +1,38 @@
-// Получаем все ссылки, ведущие на якорные элементы (начинаются с "#")
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    // Добавляем обработчик события для клика
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Останавливаем стандартное поведение (перезагрузку страницы)
+// Инициализация AOS для анимаций при прокрутке
+AOS.init({
+    duration: 800,  // Увеличиваем продолжительность анимации
+    easing: 'ease-in-out',  // Плавное начало и завершение анимации
+    once: true,  // Анимация выполняется один раз
+});
 
-        // Прокручиваем страницу до элемента, на который ведет ссылка
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth' // Плавная прокрутка
-        });
+// Плавная прокрутка при клике на якорные ссылки
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
 });
-// Инициализация AOS (анимирования при прокрутке)
-AOS.init({
-    duration: 1000,  // Время анимации
-    once: false,      // Анимация выполняется только один раз
+
+// Показ кнопки "Наверх" при прокрутке страницы
+window.addEventListener('scroll', () => {
+    const button = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+});
+
+// Прокрутка наверх при клике на кнопку
+document.getElementById('back-to-top').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
