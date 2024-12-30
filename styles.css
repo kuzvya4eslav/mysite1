@@ -15,15 +15,17 @@ body {
 
 /* Контейнер для выравнивания контента по центру и создания отступов */
 .container {
-    width: 80%;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px 20px;
 }
 
 /* Стили для заголовков (h1, h2, h3) */
 h1, h2, h3 {
     font-weight: 700;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Шапка сайта */
@@ -37,135 +39,285 @@ header {
 header nav ul {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
-/* Стили для пунктов навигации */
 header nav ul li {
-    list-style-type: none;
+    list-style: none;
 }
 
 /* Стили для ссылок в навигации */
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
+    font-size: 18px;
     text-transform: uppercase;
+    transition: color 0.3s;
 }
 
-/* Главный блок с изображением и приветствием */
+header nav ul li a:hover {
+    color: #E7A2B7;
+}
+
+/* Стили для hero секции */
 #hero {
     background-color: #E7A2B7;
-    color: #fff;
-    padding: 60px 0;
+    color: white;
+    padding: 100px 0;
     text-align: center;
-    position: relative;
-    animation: fadeIn 1s ease-out;
 }
 
-/* Заголовок в блоке hero */
 #hero h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-/* Стили для кнопки записи */
-#hero .cta-button {
+/* Кнопка CTA */
+.cta-button {
     display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-/* Эффект наведения на кнопку */
-#hero .cta-button:hover {
-    background-color: #333;
-}
-
-/* Стили для раздела "Услуги" */
-#services, #about, #contact, #appointment {
-    padding: 60px 0;
     background-color: #fff;
-    text-align: center;
-    animation: fadeIn 1s ease-out;
-}
-
-/* Блоки с описаниями услуг */
-#services .service-item {
-    display: inline-block;
-    margin: 20px;
-    padding: 30px;
-    background-color: #f3f3f3;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-/* Эффект появления на сервисах */
-#services .service-item[data-aos="fade-up"] {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Кнопка записи */
-#appointment .cta-button {
-    display: inline-block;
-    background-color: #E7A2B7;
-    color: #fff;
+    color: #E7A2B7;
     padding: 15px 30px;
-    text-decoration: none;
     font-size: 18px;
+    border-radius: 30px;
     text-transform: uppercase;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 20px;
 }
 
-/* Эффект наведения на кнопку записи */
-#appointment .cta-button:hover {
+.cta-button:hover {
+    background-color: #f1f1f1;
+}
+
+/* Раздел услуг */
+#services {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+/* Контейнер для карточек услуг */
+.services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Динамическая сетка */
+    gap: 30px; /* Расстояние между карточками */
+    justify-items: center; /* Центрируем карточки внутри сетки */
+    padding: 0 20px; /* Отступы по бокам */
+}
+
+/* Карточка услуги */
+.service-card {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Ширина карточки 100% от родителя */
+    max-width: 350px; /* Максимальная ширина карточки */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    font-size: 22px;
+    color: #E7A2B7;
+    margin-bottom: 10px;
+}
+
+.service-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Медиазапросы для мобильных устройств и планшетов */
+
+/* Мобильные устройства (менее 767px) */
+@media (max-width: 767px) {
+    .services-wrapper {
+        grid-template-columns: 1fr; /* Одна карточка в строке */
+    }
+
+    .service-content h3 {
+        font-size: 18px; /* Уменьшаем шрифт заголовков */
+    }
+
+    .service-content p {
+        font-size: 14px; /* Уменьшаем шрифт описания */
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Планшеты (от 768px до 1024px) */
+@media (max-width: 1024px) {
+    .services-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    }
+
+    .cta-button {
+        font-size: 15px;
+    }
+}
+
+/* Для экранов больше 1024px (по умолчанию) */
+@media (min-width: 1025px) {
+    .services-wrapper {
+        grid-template-columns: repeat(3, 1fr); /* Три карточки в строке */
+    }
+}
+
+/* Социальные иконки в футере */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: #333;
+    margin: 0 15px;
+}
+
+.social-icons a:hover {
+    color: #E7A2B7;
+}
+
+/* Стиль для футера */
+footer {
+    background-color: #000;
+    color: white;
+    padding: 40px 0;
+}
+
+/* Кнопка "Наверх" */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #E7A2B7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+#back-to-top:hover {
     background-color: #d28e9e;
 }
+/* Стили для раздела контактов */
+#contact {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center; /* Центрируем текст внутри блока */
+}
 
-/* Социальные иконки */
-.social-icons {
+/* Выравнивание контейнера */
+#contact .container {
+    width: 80%; /* Ограничим ширину контейнера */
+    max-width: 800px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+    padding: 0 20px; /* Добавим отступы по бокам */
+}
+
+#contact h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#contact .social-icons {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
 }
 
-.social-icon {
-    font-size: 30px;
+#contact .social-icon {
+    font-size: 24px;
     color: #333;
-    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.social-icon:hover {
-    color: #E7A2B7; /* Цвет при наведении */
+#contact .social-icon:hover {
+    color: #E7A2B7; /* Изменяем цвет иконки при наведении */
+}
+/* Раздел записи на услугу */
+#appointment {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center; /* Центрируем текст внутри блока */
 }
 
-/* Футер с правами */
-footer {
-    background-color: #000;
+/* Контейнер для записи */
+#appointment .container {
+    width: 80%; /* Ограничиваем ширину контейнера */
+    max-width: 800px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрируем контейнер по горизонтали */
+    padding: 0 20px; /* Добавим отступы по бокам */
+}
+
+#appointment h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#appointment .cta-button {
+    display: inline-block;
+    background-color: #E7A2B7;
     color: #fff;
-    text-align: center;
-    padding: 20px 0;
+    padding: 12px 25px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Отступ сверху */
 }
 
-/* Анимация для появления элемента */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+#appointment .cta-button:hover {
+    background-color: #f7f7f7;
+    color: #E7A2B7;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 767px) {
+    #appointment .container {
+        width: 90%;
     }
-    to {
-        opacity: 1;
+
+    #appointment h2 {
+        font-size: 28px;
+    }
+
+    #appointment .cta-button {
+        font-size: 14px;
+        padding: 10px 20px;
     }
 }
+
