@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Студия перманентного макияжа MargoBeauty. Индивидуальные услуги по перманентному макияжу, ламинированию ресниц и бровей.">
+    <meta name="keywords" content="перманентный макияж, ламинирование ресниц, студия красоты, брови, макияж, эстетика, MargoBeauty">
+    <meta name="author" content="MargoBeauty">
     <title>MargoBeauty - Студия Перманентного Макияжа</title>
     
     <!-- Подключение стилей для AOS -->
@@ -42,28 +45,54 @@
     </section>
 
     <!-- Раздел с услугами студии -->
-    <section id="services" data-aos="fade-up">
-        <div class="container">
-            <h2>Наши услуги</h2>
-            <div class="service-item" data-aos="fade-up">
-                <h3>Ламинирование ресниц</h3>
-                <p>Ламинирование придаёт ресницам естественную густоту и изгиб.</p>
+<section id="services" data-aos="fade-up">
+    <div class="container">
+        <h2>Наши услуги</h2>
+        <div class="services-wrapper">
+            <div class="service-card" data-aos="fade-up">
+                <img src="images/service-1.jpg" alt="Ламинирование ресниц" class="service-image">
+                <div class="service-content">
+                    <h3>Ламинирование ресниц</h3>
+                    <p>Ламинирование ресниц придает им естественную густоту и изгиб. Этот процесс подчеркивает красоту ваших ресниц и делает взгляд более выразительным.</p>
+                    <a href="#appointment" class="cta-button">Записаться</a>
+                </div>
             </div>
-            <div class="service-item" data-aos="fade-up">
-                <h3>Перманентный макияж бровей</h3>
-                <p>Идеальные брови с натуральным эффектом.</p>
+            <div class="service-card" data-aos="fade-up">
+                <img src="images/service-2.jpg" alt="Перманентный макияж бровей" class="service-image">
+                <div class="service-content">
+                    <h3>Перманентный макияж бровей</h3>
+                    <p>Перманентный макияж бровей позволяет создать идеальную форму, при этом оставляя естественный вид. Долговечный результат на долгое время.</p>
+                    <a href="#appointment" class="cta-button">Записаться</a>
+                </div>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <img src="images/service-3.jpg" alt="Коррекция бровей" class="service-image">
+                <div class="service-content">
+                    <h3>Коррекция бровей</h3>
+                    <p>Профессиональная коррекция бровей, которая подчеркивает ваши черты лица и делает взгляд более гармоничным.</p>
+                    <a href="#appointment" class="cta-button">Записаться</a>
+                </div>
+            </div>
+            <!-- Карточка, которая будет растягиваться на весь ряд -->
+            <div class="service-card full-width" data-aos="fade-up">
+                <img src="images/service-4.jpg" alt="Ламинирование бровей" class="service-image">
+                <div class="service-content">
+                    <h3>Ламинирование бровей</h3>
+                    <p>Ламинирование бровей придает форму и текстуру, а также помогает удерживать их в нужном положении без постоянной коррекции.</p>
+                    <a href="#appointment" class="cta-button">Записаться</a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <!-- Раздел "Обо мне" с кратким описанием студии -->
     <section id="about" data-aos="fade-up">
         <div class="container">
             <h2>Обо мне</h2>
-            <p>Меня зовут Маргарита. Я специализируюсь в области бьюти индустрии уже несколько лет.
-                 Десятки довольных клиентов увидели себя с другой стороны. Ты можешь стать одной из них. 
-                 Записывайся прямо на сайте, либо пиши в директ по ссылкам ниже. 
-                 Там же ты можешь посмотреть портфолио моих работ. </p>
+            <p>Меня зовут Маргарита. Я специализируюсь в области бьюти индустрии уже несколько лет. Десятки довольных клиентов увидели себя с другой стороны. Ты можешь стать одной из них. Записывайся прямо на сайте, либо пиши в директ по ссылкам ниже. Там же ты можешь посмотреть портфолио моих работ.</p>
         </div>
     </section>
 
@@ -108,6 +137,9 @@
         </div>
     </footer>
 
+    <!-- Кнопка "Наверх" -->
+    <button id="back-to-top" class="back-to-top">↑ Наверх</button>
+
     <!-- Подключение JavaScript для AOS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     
@@ -118,8 +150,43 @@
             once: false,      // Анимация выполняется только один раз
         });
     </script>
-    
+
     <!-- Подключение внешнего JavaScript файла -->
     <script src="scripts.js"></script>
+
+    <!-- Скрипт для плавной прокрутки -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Проверка на наличие элемента на странице
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Показать кнопку "Наверх" при прокрутке
+        window.addEventListener('scroll', () => {
+            const button = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
+
+        // Прокрутка наверх при клике
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
