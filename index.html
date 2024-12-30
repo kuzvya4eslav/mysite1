@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Метатеги для корректного отображения и совместимости -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- Название страницы, которое отображается в браузере -->
     <title>MargoBeauty - Студия Перманентного Макияжа</title>
     
-    <!-- Подключение шрифта Google Fonts -->
-    <link href="https://docs.google.com/forms/d/e/1FAIpQLSeongesTkpnxrbH4uY63XGVothn41gy3xKIKH29RsW4Eu5vgw/viewform?usp=sharing" rel="stylesheet">
+    <!-- Подключение стилей для AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Подключение Font Awesome для иконок соцсетей -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
     <!-- Подключение внешнего CSS файла для стилей -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Шапка сайта -->
-    <header id="header">
+    <header id="header" data-aos="fade-down">
         <div class="container">
-            <!-- Название студии -->
             <h1>MargoBeauty</h1>
-            <!-- Навигационное меню -->
             <nav>
                 <ul>
                     <li><a href="#services">Услуги</a></li>
@@ -33,54 +31,54 @@
     </header>
 
     <!-- Главный раздел с приветствием и кнопкой для записи -->
-    <section id="hero">
+    <section id="hero" data-aos="fade-up">
         <div class="container">
             <h2>Перманентный макияж, который делает вас еще красивее</h2>
-            <p>Лучшие мастера, современные методы и индивидуальный подход</p>
+            <p>Вас ожидают современные методы и индивидуальный подход</p>
+            <p>Вы увидите новую себя</p>
             <!-- Кнопка для перехода к записи -->
             <a href="#appointment" class="cta-button">Записаться на услугу</a>
         </div>
     </section>
 
     <!-- Раздел с услугами студии -->
-    <section id="services">
+    <section id="services" data-aos="fade-up">
         <div class="container">
             <h2>Наши услуги</h2>
-            <div class="service-item">
+            <div class="service-item" data-aos="fade-up">
                 <h3>Ламинирование ресниц</h3>
-                <p></p>
+                <p>Ламинирование придаёт ресницам естественную густоту и изгиб.</p>
             </div>
-            <div class="service-item">
-                <h3></h3>
-                <p></p>
-            </div>
-            <div class="service-item">
+            <div class="service-item" data-aos="fade-up">
                 <h3>Перманентный макияж бровей</h3>
-                <p>Идеальные брови с натуральным эффектом</p>
+                <p>Идеальные брови с натуральным эффектом.</p>
             </div>
         </div>
     </section>
 
-    <!-- Раздел "О нас" с кратким описанием студии -->
-    <section id="about">
+    <!-- Раздел "Обо мне" с кратким описанием студии -->
+    <section id="about" data-aos="fade-up">
         <div class="container">
-            <h2>О нас</h2>
-            <p>Мы — команда профессионалов в области перманентного макияжа. Каждый наш клиент получает индивидуальный подход и высококачественные услуги.</p>
+            <h2>Обо мне</h2>
+            <p>Меня зовут Маргарита. Я специализируюсь в области бьюти индустрии уже несколько лет.
+                 Десятки довольных клиентов увидели себя с другой стороны. Ты можешь стать одной из них. 
+                 Записывайся прямо на сайте, либо пиши в директ по ссылкам ниже. 
+                 Там же ты можешь посмотреть портфолио моих работ. </p>
         </div>
     </section>
 
     <!-- Раздел с контактной информацией -->
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
         <div class="container">
             <h2>Контакты</h2>
             <p>Звоните или пишите нам для получения дополнительной информации</p>
             <p>Email: info@margobeauty.ru</p>
-            <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+            <p>Телефон: +7 (996) 938-91-48</p>
         </div>
     </section>
 
     <!-- Раздел для записи на услуги -->
-    <section id="appointment">
+    <section id="appointment" data-aos="fade-up">
         <div class="container">
             <h2>Записаться на услугу</h2>
             <!-- Ссылка на Google Форму для записи -->
@@ -88,13 +86,39 @@
         </div>
     </section>
 
-    <!-- Футер с информацией о правах -->
-    <footer>
+    <!-- Футер с информацией о правах и кнопками соцсетей -->
+    <footer data-aos="fade-up">
         <div class="container">
             <p>&copy; 2024 MargoBeauty. Все права защищены.</p>
+            <div class="social-icons">
+                <!-- Кнопки социальных сетей -->
+                <a href="https://www.instagram.com/aaatiragram/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://t.me/aaatiragram?fbclid=PAZXh0bgNhZW0CMTEAAab_V2TGKZ_uL93gJz2hST6uf4QGWnXbvi3SYSkxctiygak8TtO7WmazM9E_aem_TiXXTV1w5zEPKbGMCGFyrw" target="_blank" class="social-icon">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://vk.com" target="_blank" class="social-icon">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="https://whatsapp.com" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
         </div>
     </footer>
 
+    <!-- Подключение JavaScript для AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <!-- Инициализация AOS -->
+    <script>
+        AOS.init({
+            duration: 1000,  // Время анимации
+            once: false,      // Анимация выполняется только один раз
+        });
+    </script>
+    
     <!-- Подключение внешнего JavaScript файла -->
     <script src="scripts.js"></script>
 </body>
