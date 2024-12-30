@@ -10,3 +10,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+// Инициализация AOS (анимирования при прокрутке)
+AOS.init({
+    duration: 1000,  // Время анимации
+    once: false,      // Анимация выполняется только один раз
+});
