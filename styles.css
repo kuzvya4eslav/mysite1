@@ -35,7 +35,7 @@ body {
 }
 
 /* Стили для заголовков h1, h2, h3 */
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-weight: 700; /* Жирный шрифт для заголовков */
     text-align: center; /* Выравниваем заголовки по центру */
     margin-bottom: 20px; /* Отступ снизу */
@@ -43,7 +43,8 @@ h1, h2, h3 {
 
 /* Шапка сайта */
 header {
-    background-color: #000; /* Черный фон */
+    background-color:#272425; /* Цвет фона */
+    ; /* Черный фон */
     color: #fff; /* Белый текст */
     padding: 20px 0; /* Внутренние отступы сверху и снизу */
 }
@@ -69,7 +70,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #E7A2B7; /* Цвет текста при наведении */
+    color: #ec507f; /* Цвет текста при наведении */
 }
 
 /* Стили для hero секции */
@@ -155,6 +156,128 @@ header nav ul li a:hover {
     margin-bottom: 20px; /* Отступ снизу */
 }
 
+/* Стили для прайс-листа */
+.price-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.price-item {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.price-item:hover {
+    background-color: #e7a2b7;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.price-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-header h3 {
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+}
+
+.price-header .price {
+    font-size: 18px;
+    color: #e7a2b7;
+}
+
+.price-description {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.price-item.active .price-description {
+    display: block;
+}
+
+/* Стили для раздела с портфолио */
+#portfolio {
+    background-color: #fff; /* Белый фон */
+    padding: 60px 0; /* Внутренние отступы */
+    text-align: center; /* Центрируем текст */
+}
+
+.portfolio-gallery {
+    display: grid; /* Используем сетку */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Динамическая сетка, карточки 200px и больше */
+    gap: 20px; /* Расстояние между карточками */
+    justify-items: center; /* Центрируем карточки внутри сетки */
+}
+
+.portfolio-item {
+    width: 100%; /* Ширина карточки 100% от родительского элемента */
+    max-width: 300px; /* Максимальная ширина карточки */
+    overflow: hidden; /* Обрезаем содержимое, выходящее за пределы */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавное изменение при наведении */
+}
+
+.portfolio-item img {
+    width: 100%; /* Ширина изображения 100% от контейнера */
+    height: auto; /* Сохраняем пропорции изображения */
+    display: block; /* Блочное отображение */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px); /* При наведении карточка немного поднимется */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Увеличиваем тень */
+}
+
+/* Стили для раздела с отзывами */
+#testimonials {
+    background-color: #f9f9f9; /* Светло-серый фон */
+    padding: 60px 0; /* Внутренние отступы */
+    text-align: center; /* Центрируем текст */
+}
+
+.testimonials-wrapper {
+    display: flex; /* Используем флекс-контейнер */
+    flex-direction: column; /* Вертикальное расположение */
+    gap: 20px; /* Расстояние между отзывами */
+}
+
+.testimonial-item {
+    background-color: #fff; /* Белый фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавное изменение при наведении */
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px); /* При наведении карточка немного поднимется */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Увеличиваем тень */
+}
+
+.testimonial-item p {
+    font-size: 16px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.testimonial-item span {
+    font-size: 14px; /* Размер шрифта */
+    color: #999; /* Цвет текста */
+}
+
 /* Медиазапросы для мобильных устройств и планшетов */
 
 /* Мобильные устройства (менее 767px) */
@@ -174,6 +297,112 @@ header nav ul li a:hover {
     .cta-button {
         font-size: 14px; /* Уменьшаем размер шрифта на кнопке */
         padding: 10px 20px; /* Уменьшаем отступы на кнопке */
+    }
+
+    body {
+        font-size: 14px; /* Уменьшаем размер шрифта для body */
+    }
+
+    h1 {
+        font-size: 24px; /* Уменьшаем размер шрифта для заголовков h1 */
+    }
+
+    h2 {
+        font-size: 20px; /* Уменьшаем размер шрифта для заголовков h2 */
+    }
+
+    h3, h4 {
+        font-size: 18px; /* Уменьшаем размер шрифта для заголовков h3 и h4 */
+    }
+
+    p {
+        font-size: 14px; /* Уменьшаем размер шрифта для параграфов */
+    }
+
+    .cta-button {
+        font-size: 14px; /* Уменьшаем размер шрифта на кнопке */
+        padding: 10px 20px; /* Уменьшаем отступы на кнопке */
+    }
+
+    .service-content h3 {
+        font-size: 18px; /* Уменьшаем шрифт заголовков */
+    }
+
+    .service-content p {
+        font-size: 14px; /* Уменьшаем шрифт описания */
+    }
+
+    #appointment h2 {
+        font-size: 28px; /* Уменьшаем размер шрифта заголовка */
+    }
+
+    #appointment .cta-button {
+        font-size: 14px; /* Уменьшаем шрифт кнопки */
+        padding: 10px 20px; /* Уменьшаем отступы кнопки */
+    }
+
+    .price-header h3 {
+        font-size: 18px; /* Уменьшаем шрифт заголовков */
+    }
+
+    .price-header .price {
+        font-size: 16px; /* Уменьшаем шрифт цены */
+    }
+
+    .price-description p {
+        font-size: 14px; /* Уменьшаем шрифт описания */
+    }
+
+    .container {
+        padding: 20px 10px; /* Уменьшаем отступы контейнера */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Вертикальное расположение навигации */
+        gap: 10px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .price-item {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .price-header {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .price-description {
+        padding: 10px; /* Уменьшаем отступы */
+    }
+
+    .about__box {
+        max-width: 100%; /* Увеличиваем ширину изображения */
+        justify-self: center; /* Центрируем */
+    }
+
+    .about__box-img {
+        width: 100%; /* Изображение будет растягиваться по ширине контейнера */
+    }
+
+    #about .container {
+        max-width: 100%; /* Увеличиваем ширину текста */
+        padding-right: 0; /* Убираем отступ справа */
+    }
+
+    #about h2 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    #about h4 {
+        font-size: 20px; /* Уменьшаем размер заголовка */
+    }
+
+    #about p {
+        font-size: 14px; /* Уменьшаем размер текста абзаца */
+    }
+
+    #about {
+        flex-direction: column; /* Вертикальное расположение элементов */
+        text-align: center; /* Центрируем текст */
     }
 }
 
@@ -201,7 +430,6 @@ header nav ul li a:hover {
         grid-template-columns: repeat(4, 1fr); /* Четыре столбца */
     }
 }
-
 
 /* Социальные иконки в футере */
 .social-icons {
@@ -254,7 +482,6 @@ footer {
 #back-to-top:hover {
     background-color: #d28e9e; /* Цвет фона при наведении */
 }
-
 
 /* Стили для раздела контактов */
 #contact {
@@ -390,7 +617,13 @@ footer {
 #about h2 {
     font-size: 36px; /* Увеличиваем размер заголовка */
     font-weight: bold; /* Делаем заголовок жирным */
-    margin-bottom: 20px; /* Добавляем отступ снизу */
+    margin-bottom: 0px; /* Добавляем отступ снизу */
+}
+
+#about h4 {
+    font-size: 30px; /* Увеличиваем размер заголовка */
+    font-weight: bold; /* Делаем заголовок жирным */
+    margin-bottom: 1px; /* Добавляем отступ снизу */
 }
 
 #about p {
@@ -401,15 +634,14 @@ footer {
 
 .about__box {
     max-width: 40%; /* Ограничиваем ширину изображения */
-    display: flex; /* Для выравнивания по правому краю */
-    justify-content: flex-end; /* Выравнивание изображения по правому краю */
+    float: right; /* Обтекание текста вокруг изображения */
+    margin-left: 20px; /* Отступ слева */
 }
 
 .about__box-img {
-    width: 90%; /* Изображение будет растягиваться по ширине контейнера */
+    width: 100%; /* Изображение будет растягиваться по ширине контейнера */
     height: auto; /* Сохраняем пропорции изображения */
 }
-
 
 /* Медиазапросы для экранов до 978px */
 @media screen and (max-width: 978px) {
@@ -446,6 +678,42 @@ footer {
     .about__box {
         max-width: 350px; /* Уменьшаем максимальную ширину */
         justify-self: center; /* Центрируем */
+    }
+}
+
+/* Медиазапросы для экранов до 767px */
+@media (max-width: 767px) {
+    #about {
+        flex-direction: column; /* Вертикальное расположение элементов */
+        text-align: center; /* Центрируем текст */
+    }
+
+    #about .container {
+        max-width: 100%; /* Увеличиваем ширину текста */
+        padding-right: 0; /* Убираем отступ справа */
+    }
+
+    .about__box {
+        float: none; /* Убираем обтекание */
+        margin-left: 0; /* Убираем отступ слева */
+        max-width: 100%; /* Увеличиваем ширину изображения */
+        justify-self: center; /* Центрируем */
+    }
+
+    .about__box-img {
+        width: 100%; /* Изображение будет растягиваться по ширине контейнера */
+    }
+
+    #about h2 {
+        font-size: 24px; /* Уменьшаем размер заголовка */
+    }
+
+    #about h4 {
+        font-size: 20px; /* Уменьшаем размер заголовка */
+    }
+
+    #about p {
+        font-size: 14px; /* Уменьшаем размер текста абзаца */
     }
 }
 
