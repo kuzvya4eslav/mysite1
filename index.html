@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Студия перманентного макияжа MargoBeauty. Индивидуальные услуги по перманентному макияжу, ламинированию ресниц и бровей.">
     <meta name="keywords" content="перманентный макияж, ламинирование ресниц, студия красоты, брови, макияж, эстетика, MargoBeauty">
     <meta name="author" content="MargoBeauty">
+    <meta property="og:title" content="Студия архитектуры бровей - MargoBeauty">
+    <meta property="og:description" content="Индивидуальные услуги по перманентному макияжу и ламинированию ресниц и бровей.">
+    <meta property="og:image" content="path/to/image.jpg">
     <title>Студия архитектуры бровей</title>
     
     <!-- Подключение стилей для AOS -->
@@ -14,10 +18,11 @@
 
     <!-- Подключение Font Awesome для иконок соцсетей -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
+
     <!-- Подключение внешнего CSS файла для стилей -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Шапка сайта -->
     <header id="header" data-aos="fade-down">
@@ -25,69 +30,19 @@
             <h1>Студия архитектуры бровей</h1>
             <nav>
                 <ul>
-                    <li><a href="#services">Услуги</a></li>
                     <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#appointment">Записаться</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Главный раздел с приветствием и кнопкой для записи -->
-    <section id="hero" data-aos="fade-up">
-        <div class="container">
-            <p>Вас ожидают современные методы и индивидуальный подход</p>
-            <p>Вы увидите новую себя</p>
-            <!-- Кнопка для перехода к записи -->
-            <a href="#appointment" class="cta-button">Записаться на услугу</a>
-        </div>
-    </section>
-
-    <!-- Раздел с услугами студии -->
-    <section id="services" data-aos="fade-up">
-        <div class="container">
-            <h2>Услуги</h2>
-            <div class="services-wrapper">
-                <div class="service-card" data-aos="fade-up">
-                    <img src="images/service-1.jpg" alt="Ламинирование ресниц" class="service-image">
-                    <div class="service-content">
-                        <h3>Ламинирование ресниц</h3>
-                        <p>Ламинирование ресниц придает им естественную густоту и изгиб, подчеркивая красоту взгляда.</p>
-                        <a href="#appointment" class="cta-button">Записаться</a>
-                    </div>
-                </div>
-                <div class="service-card" data-aos="fade-up">
-                    <img src="images/service-2.jpg" alt="Перманентный макияж бровей" class="service-image">
-                    <div class="service-content">
-                        <h3>Перманентный макияж бровей</h3>
-                        <p>Идеальная форма бровей, естественный вид и долговечность на долгое время.</p>
-                        <a href="#appointment" class="cta-button">Записаться</a>
-                    </div>
-                </div>
-                <div class="service-card" data-aos="fade-up">
-                    <img src="images/service-3.jpg" alt="Коррекция бровей" class="service-image">
-                    <div class="service-content">
-                        <h3>Коррекция бровей</h3>
-                        <p>Профессиональная коррекция для подчеркивания ваших черт лица и гармонии взгляда.</p>
-                        <a href="#appointment" class="cta-button">Записаться</a>
-                    </div>
-                </div>
-                <div class="service-card full-width" data-aos="fade-up">
-                    <img src="images/service-4.jpg" alt="Долговременная укладка бровей" class="service-image">
-                    <div class="service-content">
-                        <h3>Долговременная укладка бровей</h3>
-                        <p>Поддержание формы и текстуры бровей без необходимости постоянной коррекции.</p>
-                        <a href="#appointment" class="cta-button">Записаться</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Раздел "Обо мне" с кратким описанием студии -->
     <section id="about" data-aos="fade-up">
         <div class="container">
-            <h2>Обо мне</h2>
+            <h2>Маргарита Кузнецова</h2>
+            <h4>Мастер перманентного макияжа.</h4>
             <p>Меня зовут Маргарита. Я специализируюсь в области бьюти-индустрии уже несколько лет. Множество довольных клиентов увидели себя с другой стороны. Записывайтесь на сайте или пишите в директ, там же можно посмотреть мое портфолио.</p>
         </div>
         <div class="about__box">
@@ -95,13 +50,48 @@
         </div>
     </section>
 
-    <!-- Раздел с контактной информацией -->
-    <section id="contact" data-aos="fade-up">
+    <!-- Раздел с услугами студии -->
+    <section id="services" data-aos="fade-up">
         <div class="container">
-            <h2>Контакты</h2>
-            <p>Звоните или пишите для получения дополнительной информации:</p>
-            <p></p>
-            <p>Телефон: +7 (996) 938-91-48</p>
+            <h2>Услуги</h2>
+            <div class="price-list">
+                <div class="price-item" data-aos="fade-up">
+                    <div class="price-header">
+                        <h3>Ламинирование ресниц</h3>
+                        <span class="price">5000 RUB</span>
+                    </div>
+                    <div class="price-description">
+                        <p>Ламинирование ресниц придает им естественную густоту и изгиб, подчеркивая красоту взгляда.</p>
+                    </div>
+                </div>
+                <div class="price-item" data-aos="fade-up">
+                    <div class="price-header">
+                        <h3>Перманентный макияж бровей</h3>
+                        <span class="price">9000 RUB</span>
+                    </div>
+                    <div class="price-description">
+                        <p>Идеальная форма бровей, естественный вид и долговечность на долгое время.</p>
+                    </div>
+                </div>
+                <div class="price-item" data-aos="fade-up">
+                    <div class="price-header">
+                        <h3>Коррекция бровей</h3>
+                        <span class="price">4000 RUB</span>
+                    </div>
+                    <div class="price-description">
+                        <p>Профессиональная коррекция для подчеркивания ваших черт лица и гармонии взгляда.</p>
+                    </div>
+                </div>
+                <div class="price-item" data-aos="fade-up">
+                    <div class="price-header">
+                        <h3>Долговременная укладка бровей</h3>
+                        <span class="price">1500 RUB</span>
+                    </div>
+                    <div class="price-description">
+                        <p>Поддержание формы и текстуры бровей без необходимости постоянной коррекции.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -114,17 +104,38 @@
         </div>
     </section>
 
+    <!-- Раздел с отзывами -->
+    <section id="testimonials" data-aos="fade-up">
+        <div class="container">
+            <h2>Отзывы клиентов</h2>
+            <div class="testimonials-wrapper">
+                <div class="testimonial-item">
+                    <p>"Отличный сервис и профессиональный подход. Очень довольна результатом!"</p>
+                    <span>- Анна</span>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Маргарита - настоящий мастер своего дела. Рекомендую всем!"</p>
+                    <span>- Ольга</span>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Очень уютная студия и приятная атмосфера. Обязательно приду еще раз."</p>
+                    <span>- Екатерина</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Футер с информацией о правах и кнопками соцсетей -->
     <footer data-aos="fade-up">
+        <h2>Связаться со мной</h2>
         <div class="social-icons">
-            <!-- Кнопки социальных сетей -->
             <a href="https://www.instagram.com/aaatiragram/" target="_blank" class="social-icon">
                 <i class="fab fa-instagram"></i>
             </a>
             <a href="https://t.me/aaatiragram" target="_blank" class="social-icon">
                 <i class="fab fa-telegram"></i>
             </a>
-                <a href="https://whatsapp.com" target="_blank" class="social-icon">
+            <a href="https://wa.me/your-phone-number" target="_blank" class="social-icon">
                 <i class="fab fa-whatsapp"></i>
             </a>
         </div>
@@ -182,4 +193,5 @@
         });
     </script>
 </body>
+
 </html>
