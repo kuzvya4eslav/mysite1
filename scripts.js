@@ -36,3 +36,10 @@ document.getElementById('back-to-top').addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// Раскрытие описания услуги при нажатии на полоску
+document.querySelectorAll('.price-item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
